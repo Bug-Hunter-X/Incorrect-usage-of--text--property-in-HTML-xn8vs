@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to access and modify text content
+    document.getElementById("myDiv").textContent = "Incorrect way"; // Works fine
+    document.getElementById("myDiv").text = "This will not work"; //Throws TypeError
+
+    //Correct way
+    document.getElementById("myDiv").innerText = "Correct way";
+
+  </script>
+</body>
+</html>
